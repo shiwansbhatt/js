@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style = "background-color: black; color :white;">
+    <ul class="language">
+        <li>JAVA Script</li>
+    </ul>
+</body>
+<script>
+    //addList
+    function addLang(langName){
+        const list = document.createElement('li')
+        list.innerHTML = `${langName}`
+
+        document.querySelector('.language').appendChild(list)
+    }
+    function addOptimizeLang(langName){
+        const list = document.createElement('li')
+        const addText = document.createTextNode(langName) 
+        list.appendChild(addText)
+        document.querySelector('.language').appendChild(list)
+    }
+    addLang("python")
+    addLang("java")
+    addOptimizeLang("Swift")
+    addOptimizeLang("CPP")
+
+    //Edit list
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+    // secondLang.innerHTML = "Test"
+    const newLi = document.createElement('li')
+    newLi.textContent = "TypeScript"
+    console.log(newLi)
+    secondLang.replaceWith(newLi)
+
+    //Edit list
+    const firstLang = document.querySelector("li:first-child")
+    console.log(firstLang)
+    firstLang.outerHTML = '<li>SQL</li>'
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
