@@ -1,13 +1,13 @@
 JS----
 //var in js has problem of scope so let,const is used for variable declaration
 
-https://tc39.es/ecma262/#sec-intro4e-----official documentation for js,
+https://tc39.es/ecma262/#sec-intro4e-----official documentation for js
 mdn ---documentation for js
 
-type of undefined --->undefined,
+type of undefined --->undefined
 type of null ---->object
 
-primitive_type (string,int,boolean,null,undefined,bigInt,symbol),
+primitive_type (string,int,boolean,null,undefined,bigInt,symbol)
 reference_type (array,objects,functions)
 
 memories-->stack(primitive datatype),heap(reference datatype)
@@ -36,3 +36,39 @@ JS code runs in two phases-1.memory creation phase
 	
 
 - js is single threaded
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+DOM Learning----------------                                      
+						WINDOW
+						   |
+						   |
+						DOCUMENT
+						   |
+						   |
+						  HTML
+						/     \	
+					       /       \
+					    HEAD      BODY
+					  /    |	  \
+					 /     |           \
+				      TITLE   META         DIV->attribute
+				     /	       |	   /   \ 
+				    /	       |	  /     \
+			       TEXT NODE   ATTRIBUTE	 h1      p
+							 |	  \	
+							 |         \
+						     text node    text node
+
+//getAttribute(), setAttribute()
+//document.createElement
+//getElementById()
+//id.textContext --> gives the all text which is actually present there in response
+//id.innerText -->gives the text which is only visible in response
+//id.innerHTML -->gives also the html code inside if any with the actual code
+//document.querySelector -->eg-(document.querySelector('h1')-->gives the first h1 tag in response
+			      -(document.querySelector('#id')
+			      -(document.querySelector('.class')
+//document.querySelectorAll -->gives typeof nodeList in response and returns all specify tags or class or ids
+//HTMLcollection to Array --> Array.from(<HTMLcollectioName>)
