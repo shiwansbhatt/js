@@ -35,7 +35,7 @@ JS code runs in two phases-1.memory creation phase
 		 note - (everytime new function will execute these memory phase and execution phase are repeated)
 	
 
-- js is single threaded
+- js is synchronous, single threaded(code runs one by one at a time)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,3 +72,19 @@ DOM Learning----------------
 			      -(document.querySelector('.class')
 //document.querySelectorAll -->gives typeof nodeList in response and returns all specify tags or class or ids
 //HTMLcollection to Array --> Array.from(<HTMLcollectioName>)
+//setInterval() --> takes a function and time in argument (had used to make Clock)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML events->
+
+//type
+//timestamp
+//preventDefault
+
+//these two will happen when we pass third argument in event listener bydefault it is false event capturing happens when we pass true in third argument
+//event bubbling -> first inner than outer
+
+//event capturing -> first outer than inner 
+//if we don't want bubbling then we can use <e.stopPropagation()> function
+
+//asynchronous code - 
